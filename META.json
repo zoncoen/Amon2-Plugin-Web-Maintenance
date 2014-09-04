@@ -48,7 +48,9 @@
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.98"
+            "Amon2" : "0",
+            "Test::More" : "0.98",
+            "Test::WWW::Mechanize::PSGI" : "0"
          }
       }
    },
