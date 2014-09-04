@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Simple maintenance announcement page plugin for Amon2.",
    "author" : [
       "zoncoen <zoncoen@gmail.com>"
    ],
@@ -53,6 +53,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/zoncoen/Amon2-Plugin-Web-Maintenance/issues"
+      },
+      "homepage" : "https://github.com/zoncoen/Amon2-Plugin-Web-Maintenance",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/zoncoen/Amon2-Plugin-Web-Maintenance.git",
+         "web" : "https://github.com/zoncoen/Amon2-Plugin-Web-Maintenance"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:ZONCOEN"
 }

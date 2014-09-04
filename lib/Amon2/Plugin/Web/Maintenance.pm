@@ -96,15 +96,52 @@ __END__
 
 =head1 NAME
 
-Amon2::Plugin::Web::Maintenance - It's new $module
+Amon2::Plugin::Web::Maintenance - Simple maintenance announcement page plugin for Amon2.
 
 =head1 SYNOPSIS
 
-    use Amon2::Plugin::Web::Maintenance;
+    package MyApp::Web;
+
+    __PACKAGE__->load_plugins('Web::Maintenance');
 
 =head1 DESCRIPTION
 
-Amon2::Plugin::Web::Maintenance is ...
+Amon2::Plugin::Web::Maintenance is simple maintenance announcement page plugin for Amon2.
+
+=head1 CONFIGURE
+
+You can configure in config file. This plugin use C<< $c->config->{MAINTENANCE} >>.
+
+    +{
+        'MAINTENANCE' => +{
+            enable => 1,
+            except => +{
+                addr => ['127.0.0.1'],
+                path => ['/info']
+            }
+        },
+    };
+
+If 'enable' is 1, your application response maintenance announcement page always.
+
+You can except some request by using 'expect' value. 'addr' and 'path' express exceptional conditions like L<Plack::Builder::Conditionals>.
+
+=head1 CUSTOM MAINTENANCE PAGE
+
+You can customize the maintenance page. You can define the special named method 'res_maintenance'.
+
+    package MyApp::Web;
+
+    sub res_maintenance {
+        my ($c)  =  @_;
+        return $c->create_response(
+            503,
+            [   'Content-Type'   => 'text/plain',
+                'Content-Length' => 29,
+            ],
+            ['Service down for maintenance.']
+        );
+    }
 
 =head1 LICENSE
 
