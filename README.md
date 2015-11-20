@@ -28,7 +28,7 @@ You can configure in config file. This plugin use `$c->config->{MAINTENANCE}`.
 
 If 'enable' is 1, your application response maintenance announcement page always.
 
-You can except some request by using 'expect' value. 'addr' and 'path' express exceptional conditions like [Plack::Builder::Conditionals](https://metacpan.org/pod/Plack::Builder::Conditionals).
+You can except some request by using 'except' value. 'addr' and 'path' express exceptional conditions like [Plack::Builder::Conditionals](https://metacpan.org/pod/Plack::Builder::Conditionals).
 
 # CUSTOM MAINTENANCE PAGE
 

@@ -124,7 +124,7 @@ You can configure in config file. This plugin use C<< $c->config->{MAINTENANCE} 
 
 If 'enable' is 1, your application response maintenance announcement page always.
 
-You can except some request by using 'expect' value. 'addr' and 'path' express exceptional conditions like L<Plack::Builder::Conditionals>.
+You can except some request by using 'except' value. 'addr' and 'path' express exceptional conditions like L<Plack::Builder::Conditionals>.
 
 =head1 CUSTOM MAINTENANCE PAGE
 
